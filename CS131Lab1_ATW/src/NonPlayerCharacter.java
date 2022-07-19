@@ -16,30 +16,20 @@ public class NonPlayerCharacter extends GameCharacter{
 	
 	private boolean active;
 	private String intelligenceType;
-
+	// end instance fields
 	
-	// Step 3
 	public NonPlayerCharacter () {
 		super ();
 		this.setActive(false);
 		this.setIntelligenceType("AVERAGE");
 	}	// end empty-argument constructor
 	
-	
-	
-	
-	// Step 4
-	public NonPlayerCharacter(String id, String personality, boolean active, String intelligenceType) {
+	public NonPlayerCharacter(boolean active, String intelligenceType) {
 		super ();
 		this.setActive(active);
 		this.setIntelligenceType(intelligenceType);
 	}	// end preferred constructor
 
-
-	
-	
-	
-	// Step 5
 	public String reportStructure () {
 		super.reportStructure();
 		StringBuilder sb = new StringBuilder ("==================================\n");
@@ -49,62 +39,35 @@ public class NonPlayerCharacter extends GameCharacter{
 		sb.append("Active: "+isActive()+"\n");
 		sb.append("Intelligence: "+getIntelligenceType()+"\n");
 		sb.append("==================================\n");
-		
-		
 		return sb.toString();
 	}	// end reportStructure method
 	
-	
-	
-	
-	//Step 6
 	public String introduce () {
 		super.getUniqueID();
 		return ("Hello, my name is "+getUniqueID());
-		
-		
-			}	// end introduce method
-	
-	
-	
-	
-	// Step 7
+	}	// end introduce method
+
 	public String exclaim () {
 		String[] exclaim =  {"Dag Gummit", "Doggone it", "Holy cow", "Jeez", "Well cheese and crackers"};
       	Random r=new Random();        
       	int randomNumber=r.nextInt(exclaim.length);
       	return (exclaim[randomNumber]);
-		
-
-		
 	}	// end exclaim method
 
-
-	
-	
-	
-	
-	
-	// Step 2
 	public boolean isActive() {
 		return active;
 	}	// end getActive
-
 
 	public void setActive(boolean active) {
 		this.active = false;
 	}	// end setActive
 
-
 	public String getIntelligenceType() {
 		return intelligenceType;
 	}	// end getIntelligenceType
 
-
 	public void setIntelligenceType(String intelligenceType) {
 		this.intelligenceType = intelligenceType;
 	}	// end setIntelligenceType
-	
-	
 
 }//end class

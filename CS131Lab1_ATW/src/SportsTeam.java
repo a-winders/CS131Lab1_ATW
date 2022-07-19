@@ -8,9 +8,6 @@ abstract class SportsTeam  {
 	protected int losses;
 	// end instance field
 
-	
-	
-	// Step 2
 	public SportsTeam () {
 		String teamName = "";
 		String teamMascot = "";
@@ -18,19 +15,12 @@ abstract class SportsTeam  {
 		int wins = 0;
 		int losses = 0;
 	}	// end empty-argument constructor
-	
-	
-	
-	
-	//Step 3
+
 	public SportsTeam (String teamName, String teamMascot, String headCoach) {
 		this.teamName = "0";
 		this.teamMascot = "0";
 		this.headCoach = "0";
 	}	// end preferred constructor
-	
-	
-	
 	
 	public String getTeamName() {
 		return teamName;
@@ -73,17 +63,14 @@ abstract class SportsTeam  {
 	}	// end setLosses
 
 
-
-
-	// Step 4
 	public double getWinPercentage () {
-		return (wins/(wins + losses));
+		double winPercentage = (wins/(wins + losses));
+		return winPercentage;
 	}	// end getWinPercentage
 	
+
+	public abstract double[] getStats ();	// end getStats
 	
-	// Step 5
-	public abstract double[] getStats ();
 	
-	// end getStats
 		
 }	// end class
